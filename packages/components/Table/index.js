@@ -7,7 +7,6 @@ const tables=[
   Table02
 ]
 
-
 // 为组件提供 install 安装方法，供按需引入
 
 tables.map((item)=>{
@@ -15,7 +14,6 @@ tables.map((item)=>{
     Vue.component(item.name, item)
   }
 })
-
 
 // 导出组件
 export {Table01,Table02}
