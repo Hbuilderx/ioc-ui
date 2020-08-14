@@ -1,0 +1,109 @@
+/* 页面设计稿宽度 */
+//$design-width: 3840;
+//$design-height:1364;
+//$design-width: 6080;
+//
+//$design-height:2160;
+
+$design-width: 3264;
+
+$design-height: 2160;
+
+$design-width1: 1538;
+
+$design-height1: 864;
+
+/* 将页面分为10块 */
+$base-font-size: 32;
+
+
+//test
+@function px2fontT($px) {
+  @return $px+px;
+}
+
+/* 单位px转化为vw */
+@function px2vwT($px) {
+  @return $px+px;
+}
+
+/* 单位px转化为vh */
+@function px2vhT($px) {
+  @return $px+px;
+}
+
+@function calwp($px,$width) {
+  @return percentage($px / $width) ;
+}
+
+@function calwp2($px,$width) {
+  @return percentage(($width - $px) / $width) ;
+}
+
+@function calhp($px,$height) {
+  @return percentage($px / $height) ;
+}
+
+@function calhp2($px,$height) {
+  @return percentage(($height - $px) / $height) ;
+}
+
+
+//实际使用
+@function px2font($px) {
+
+  @return ($px / $design-width) * 100vw;
+  //@return #{$px / $base-font-size}rem;
+}
+
+
+@function px2rem($px) {
+  @return #{$px / $base-font-size}rem;
+}
+
+/* 单位rem转化为px，可用于根据rem单位快速计算原px */
+@function rem2px($rem) {
+  @return #{$rem * $base-font-size}px;
+}
+
+
+/*
+    vw与px对应关系，100vw为视窗宽度，$vw即为$px对应占多宽
+
+        $px                    $vw
+    -------------    ===    ------------
+    $design-width              100vw
+*/
+
+/* 单位px转化为vw */
+@function px2vw($px) {
+  @return ($px / $design-width) * 100vw;
+}
+
+/* 单位px转化为vh */
+@function px2vh($px) {
+  @return ($px / $design-height) * 100vh;
+}
+
+
+/* 单位px转化为vw */
+@function px2vw1($px) {
+  @return ($px / $design-width1) * 100vw;
+}
+
+/* 单位px转化为vh */
+@function px2vh1($px) {
+  @return ($px / $design-height1) * 100vh;
+}
+
+
+@function px2font1($px) {
+
+  @return ($px / $design-width1) * 100vw;
+  //@return #{$px / $base-font-size}rem;
+}
+
+/* 单位px转化为vh的剩余空间 */
+@function px2vhOut($px) {
+  @return (1-($px / $design-height)) * 100vh;
+}

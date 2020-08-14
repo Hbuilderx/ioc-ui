@@ -1,24 +1,28 @@
+[toc]
 # ioc-ui-alpha
 
-## Project setup
+### 初始化
+##### 安装依赖
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+npm install 或者 yarn install
 ```
 
-### Compiles and minifies for production
+##### 开发环境运行
+```
+npm run serve 或者 yarn run serve
+```
+
+##### 打包
 ```
 npm run build
 ```
 
-### Lints and fixes files
+##### es lint
 ```
 npm run lint
 ```
 
-### Customize configuration
+##### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 目录结构

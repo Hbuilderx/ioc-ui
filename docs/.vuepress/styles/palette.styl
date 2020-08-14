@@ -1,0 +1,67 @@
+$accentColor =#1890FF//默认主题颜色
+$textColor = #202124//默认字体颜色
+$borderColor = #eaecef//默认边框颜色
+$codeBgColor = #282c34//默认背景颜色
+
+/*修改滚动条样式*/
+.sidebar::-webkit-scrollbar{
+  width:6px;
+  height:6px;
+  /**/
+}
+.sidebar::-webkit-scrollbar-track{
+  background: rgb(249, 249, 249);
+  border-radius:2px;
+}
+.sidebar::-webkit-scrollbar-thumb{
+  background: #bfbfbf;
+  border-radius:10px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover{
+  background: rgb(219, 219, 219);
+  cursor:pointer;
+}
+.sidebar::-webkit-scrollbar-corner{
+  background: #179a16;
+}
+
+
+
+//示例修改相关样式f12找到需要修改的地方找到对应class类拿过来直接用就行了
+
+.home{
+  position:relative;
+  //border:1px solid red;
+  //height:100vh !important;
+  //width:100vw !important;
+  //height:90wh
+  .hero{
+   // position:absolute;
+
+  }
+}
+
+
+.page{
+  background-color:#F7F8FA;
+  .theme-default-content{
+    background-color:#fff;
+    box-shadow:0 8px 12px #ebedf0;
+    max-width: 940px;
+  }
+}
+
+
+.sidebar-group.is-sub-group > .sidebar-heading:not(.clickable) {
+  opacity: 1
+
+}
+.navbar{
+  border:0;
+  box-shadow:0 8px 12px #ebedf0;
+}
+
+.sidebar{
+  box-shadow:0 8px 12px #ebedf0;
+  border:0
+}
