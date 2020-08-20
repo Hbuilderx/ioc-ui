@@ -5,6 +5,7 @@
       <TableCases></TableCases>
       <VideoCases></VideoCases>
       <MarqueeCases></MarqueeCases>
+      <DataItemCases></DataItemCases>
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import LineChartCases from "./components/Chart/LineChartCases";
 import TableCases from "./components/Table/TableCases";
 import VideoCases from "./components/Video/VideoCases";
 import MarqueeCases from "./components/Marquee/MarqueeCases";
+import DataItemCases from "./components/DataItem/DataItemCases"
 
 export default {
   name: 'App',
@@ -22,7 +24,8 @@ export default {
     LineChartCases,
     TableCases,
     VideoCases,
-    MarqueeCases
+    MarqueeCases,
+    DataItemCases
   },
   data(){
     return{

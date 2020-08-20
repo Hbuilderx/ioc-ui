@@ -14,15 +14,17 @@
       </span>
     </div>
     <div class='table-body'>
-      <div class='scoll-wrapper'>
+      <div class='scroll-wrapper'>
         <div class='table-body-row' v-for='(row, index) in source' :key='index'>
-          <span
-            class='table-body-col'
-            v-for='(col, colIdx) in columns'
-            :key='colIdx'
-            :title='row[col.key]'>
+            <span
+              class='table-body-col'
+              v-for='(col, colIdx) in columns'
+              :key='colIdx'
+              :title='row[col.key]'
+              :class="switchClass(row[col.key])"
+            >
             {{row[col.key]}}
-          </span>
+           </span>
         </div>
       </div>
     </div>
@@ -47,9 +49,9 @@
           { type: '测试类型', name: '新增·测试事件', address: '吴中区', source: 'PC录入', time: '2020-07-27' },
           { type: '测试类型', name: '新增·测试事件', address: '吴中区', source: 'PC录入', time: '2020-07-27' },
           { type: '测试类型', name: '新增·测试事件', address: '吴中区', source: 'PC录入', time: '2020-07-27' },
+          { type: '测试类型', name: '新增·测试事件', address: '相城区', source: 'PC录入', time: '2020-07-27' },
           { type: '测试类型', name: '新增·测试事件', address: '吴中区', source: 'PC录入', time: '2020-07-27' },
-          { type: '测试类型', name: '新增·测试事件', address: '吴中区', source: 'PC录入', time: '2020-07-27' },
-          { type: '测试类型', name: '新增·测试事件', address: '吴中区', source: 'PC录入', time: '2020-07-27' },
+          { type: '测试类型', name: '新增·测试事件', address: '姑苏区', source: 'PC录入', time: '2020-07-27' },
           { type: '测试类型', name: '新增·测试事件', address: '吴中区', source: 'PC录入', time: '2020-07-27' },
           { type: '测试类型', name: '新增·测试事件', address: '吴中区', source: 'PC录入', time: '2020-07-27' },
           { type: '测试类型', name: '新增·测试事件', address: '吴中区', source: 'PC录入', time: '2020-07-27' },
@@ -59,6 +61,17 @@
     },
     data() {
       return {}
+    },
+
+    methods:{
+      switchClass(type){
+        if(type.indexOf("相城区")>-1){
+          return 'table-body-col-warn'
+        }
+        if(type.indexOf("姑苏区")>-1){
+          return 'table-body-col-success'
+        }
+      },
     },
   }
 </script>
@@ -73,21 +86,15 @@
       height: 30px;
       line-height: 30px;
       text-align: center;
-      font-weight: 600;
       display: flex;
       z-index: 2;
 
       .table-header-item{
-        background-color: #007ee4;
+        background-color: #123052;
         display: block;
         flex: 1;
         text-align: center;
-        color: #fff;
-        margin-left: 5px;
-
-        &:first-child{
-          margin-left: 0;
-        }
+        color: #26a9fc;
       }
     }
 
@@ -96,7 +103,7 @@
       height: calc( 100% - 30px );
       overflow: hidden;
 
-      .scoll-wrapper{
+      .scroll-wrapper{
         width: 100%;
         overflow: hidden;
         animation: tableScoll 20s linear infinite;
@@ -110,8 +117,9 @@
           color: #fff;
           text-align: center;
           display: flex;
+         // border: 1px solid red;
 
-          &:first-child{
+          /*&:first-child{
             .table-body-col{
               color: rgb(163, 21, 46);
             }
@@ -133,14 +141,27 @@
             .table-body-col{
               background-color: rgba(17, 67, 157, .8);
             }
-          }
+          }*/
 
           .table-body-col{
+            font-weight: 200;
             flex: 1;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            border-bottom: 1px solid #283951;
+            background-color: #10233d;
+            color: #fff;
           }
+
+          .table-body-col-warn{
+            color: red;
+          }
+
+          .table-body-col-success{
+            color: green;
+          }
+
         }
       }
     }

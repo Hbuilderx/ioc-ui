@@ -2,6 +2,7 @@
   <div class="marquee-wrap">
       <div class="marquee-wrap-item">
           <ioc-marquee :time="time"></ioc-marquee>
+
       </div>
   </div>
 </template>
@@ -11,7 +12,7 @@
     name:"MarqueeCases,",
     data(){
       return{
-        
+
       };
     },
   }

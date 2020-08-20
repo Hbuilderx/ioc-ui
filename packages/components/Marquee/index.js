@@ -1,11 +1,11 @@
 import Marquee from "./src/index"
 
-const tables=[
+const  marquees=[
     Marquee
 ]
 
 // 为组件提供 install 安装方法，供按需引入
-tables.map((item)=>{
+marquees.map((item)=>{
     item.install = function (Vue) {
         Vue.component(item.name, item)
     }

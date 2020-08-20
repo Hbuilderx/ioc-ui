@@ -24,7 +24,7 @@
         type: Array,
         default: () => []
       },
-      // 额外的样式定制
+      // 额外的配置
       extraOption: {
         type: Object,
         default: () => ({})
