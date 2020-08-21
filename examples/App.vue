@@ -7,7 +7,7 @@
       <MarqueeCases></MarqueeCases>
       <DataItemCases></DataItemCases>
       <div class="temp">
-        <ContainerEntrance kind="002"></ContainerEntrance>
+        <ContainerEntrance kind="no">111</ContainerEntrance>
       </div>
   </div>
 </template>
@@ -52,6 +52,7 @@ export default {
 
 .temp{
   float: left;
+  margin: 10px;
 }
 
 </style>

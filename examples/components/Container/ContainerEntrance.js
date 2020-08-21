@@ -3,6 +3,8 @@ import cont1 from "./cont1.vue"
 import cont2 from "./cont2.vue"
 import cont3 from "./cont3.vue"
 
+import Button from "../../../packages/components/Button/src/index.vue"
+
 export default {
   name: "ContainerEntrance",
   functional: true,
@@ -24,6 +26,9 @@ export default {
           break;
         case'003':
           return cont3;
+          break;
+        case'no':
+          return Button;
           break;         
       }   
     }
