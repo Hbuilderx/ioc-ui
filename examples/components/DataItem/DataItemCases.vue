@@ -15,13 +15,7 @@
                   :icon="source[2].icon"
               ></ioc-dataItem03>
           </div>
-          <div class="dataitem-wrap-item-box">
-              <ioc-dataItem04
-                  :name="source[3].name"
-                  :value="source[3].value"
-                  :icon="source[3].icon"
-              ></ioc-dataItem04>
-          </div>
+          
 
           <div class="dataitem-wrap-item-box">
               <ioc-dataItem05
@@ -31,7 +25,42 @@
                value=1300
               ></ioc-dataItem05>
           </div>
-
+          
+         
+          <div class="dataitem-wrap-item-box">
+              <ioc-dataItem06
+               name="处办预期二级预警"
+               total=20
+               value=7
+               background="#FFCC00"
+              
+              ></ioc-dataItem06>
+          </div>
+          
+          <div class="dataitem-wrap-item-box">
+              <ioc-dataItem04
+                  :name="source[3].name"
+                  :value="source[3].value"
+                  :icon="source[3].icon"
+              ></ioc-dataItem04>
+          </div>
+          
+          <div class="dataitem-wrap-item-box">
+              <ioc-dataItem07
+               name="第三方巡查公司"
+               total=1467
+               value=1450            
+              ></ioc-dataItem07>
+          </div>
+          
+          <div class="dataitem-wrap-item-box">
+              <ioc-dataItem08
+               num=3
+               value=4.567
+               name="江苏省工业园区地方税务局啊哈哈哈哈哈"
+              ></ioc-dataItem08>
+          </div>
+          
       </div>
   </div>
 </template>
@@ -77,7 +106,7 @@
           float: left;
          overflow: hidden;
         .dataitem-wrap-item{
-            width: 350px;
+            width: 850px;
             height: 300px;
             float: left;
             background-color:$component-bg;
@@ -86,6 +115,7 @@
             margin: 10px;
             .dataitem-wrap-item-box{
                 margin: 10px;
+                float: left;
             }
         }
     }

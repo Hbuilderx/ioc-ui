@@ -8,7 +8,17 @@ import {Chart} from './components/Chart/index.js'
 import {Table01,Table02} from './components/Table/index.js'
 import {Video} from './components/Video/index.js'
 import {Marquee} from './components/Marquee/index.js'
-import {DataItem01,DataItem02,DataItem03,DataItem04,DataItem05} from './components/DataItem/index.js'
+import {
+  
+DataItem01,
+DataItem02,
+DataItem03,
+DataItem04,
+DataItem05,
+DataItem06,
+DataItem07,
+DataItem08
+ } from './components/DataItem/index.js'
 
 // 组件列表
 const components = [
@@ -22,7 +32,10 @@ const components = [
   DataItem02,
   DataItem03,
   DataItem04,
-  DataItem05
+  DataItem05,
+  DataItem06,
+  DataItem07,
+  DataItem08
 ]
 
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，那么所有的组件都会被注册
@@ -51,7 +64,10 @@ export default {
   DataItem01,
   DataItem02,
   DataItem03,
-  DataItem04
+  DataItem04,
+  DataItem06,
+  DataItem07,
+  DataItem08
 
 }
 

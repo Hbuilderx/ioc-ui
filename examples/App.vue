@@ -6,6 +6,9 @@
       <VideoCases></VideoCases>
       <MarqueeCases></MarqueeCases>
       <DataItemCases></DataItemCases>
+      <div class="temp">
+        <ContainerEntrance kind="002"></ContainerEntrance>
+      </div>
   </div>
 </template>
 
@@ -16,6 +19,7 @@ import TableCases from "./components/Table/TableCases";
 import VideoCases from "./components/Video/VideoCases";
 import MarqueeCases from "./components/Marquee/MarqueeCases";
 import DataItemCases from "./components/DataItem/DataItemCases"
+import ContainerEntrance from "./components/Container/ContainerEntrance.js"
 
 export default {
   name: 'App',
@@ -25,7 +29,8 @@ export default {
     TableCases,
     VideoCases,
     MarqueeCases,
-    DataItemCases
+    DataItemCases,
+    ContainerEntrance
   },
   data(){
     return{
@@ -42,6 +47,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   background-color: #555a65;
   margin: 10px;
+  
+}
+
+.temp{
+  float: left;
 }
 
 </style>

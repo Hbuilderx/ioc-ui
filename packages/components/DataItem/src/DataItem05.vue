@@ -94,12 +94,14 @@
         justify-content: space-evenly;
         align-items: center;
         background-color: #0E1F38;
+        transition: all .5s;
     }
 
     .box-active{
-        border: 1px solid #104DBA;
+        outline: 1px solid #104DBA;
         background-color: #122D4D;
         cursor: pointer;
+        transition: all .5s;
     }
 
 
@@ -140,7 +142,7 @@
 
     .box .value{
         color: #fff;
-        font-size: 30px;
+        font-size: px2font(32);
     }
 
 </style>
