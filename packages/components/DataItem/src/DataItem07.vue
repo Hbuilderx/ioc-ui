@@ -1,3 +1,11 @@
+<!--
+@name:
+@description:
+@author: zhu.ds
+@date: 2020-08-22 08:36:19
+@last edit by:
+-->
+
 <template>
     <div class="box">
         <div class="name" >{{name}}</div>
@@ -11,7 +19,6 @@
 </template>
 
 <script>
-  import {styleUtil} from "./../../../common/utils/styleUtils"
   export default {
     name: "ioc-dataItem07",
     props:{
@@ -56,7 +63,7 @@
             cubeDom.style.background='#0F3D61'          
             cubeDom.style.width=cubeWidth+'px'         
             this.$refs.total.appendChild(cubeDom)
-          };
+          }
                 
           let nowCubeCount=Math.floor(cubeCount*ratio);              
           cubeDomArr=this.$refs.total.children;   
@@ -67,7 +74,7 @@
           
           for(let i=0;i<endColor.length;i++){
             perDiffColor.push( Number(((endColor[i]-startColor[i])/nowCubeCount).toFixed(3)))
-          };  
+          }
         
           for(let i=0;i<nowCubeCount;i++){
             cubeDomArr[i].style.background=
@@ -76,7 +83,7 @@
               ${startColor[1]+i*perDiffColor[1]},
               ${startColor[2]+i*perDiffColor[2]})
             `
-          };
+          }
           
           
         },
