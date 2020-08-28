@@ -6,6 +6,9 @@ import DataItem05 from "./src/DataItem05"
 import DataItem06 from "./src/DataItem06"
 import DataItem07 from "./src/DataItem07"
 import DataItem08 from "./src/DataItem08"
+import DataItem09 from "./src/DataItem09"
+import DataItem10 from "./src/DataItem10"
+import DataItem11 from "./src/DataItem11"
 const DataItems=[
   DataItem01,
   DataItem02,
@@ -14,9 +17,11 @@ const DataItems=[
   DataItem05,
   DataItem06,
   DataItem07,
-  DataItem08
+  DataItem08,
+  DataItem09,
+  DataItem10,
+  DataItem11
   
-
 ]
 
 // 为组件提供 install 安装方法，供按需引入
@@ -35,5 +40,8 @@ export {
   DataItem05,
   DataItem06,
   DataItem07,
-  DataItem08
+  DataItem08,
+  DataItem09,
+  DataItem10,
+  DataItem11
 }
