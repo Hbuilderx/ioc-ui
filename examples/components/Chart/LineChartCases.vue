@@ -5,6 +5,7 @@
                 :data-list="chartData"
                 :extra-option="option1"
                 :chart-type="chartType"
+                :autoplay="true"
             />
         </div>
     </div>
@@ -14,7 +15,7 @@
   import {lineChartSettings} from "../../common/data/lineChartSettings";
 
   export default {
-    name: "PieChartCases",
+    name: "LineChartCases",
     data(){
       return{
         // 业务数据单独配置(可选)
