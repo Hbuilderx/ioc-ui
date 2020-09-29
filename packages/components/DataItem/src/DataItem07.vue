@@ -25,7 +25,7 @@
       name:{
         type:String,
         default:()=>('数据名称')
-      },
+      }, 
       total:{
         type:Number,
         default:()=>(24)
@@ -55,7 +55,7 @@
           let totalDomWidth=this.$refs.total.offsetWidth;  
           let ratio=(this.value/this.total);
           let cubeWidth=Math.floor((totalDomWidth/cubeCount)-1);  
-   
+         
           let cubeDomArr;
                
           for(let i=0;i<cubeCount;i++){
@@ -81,7 +81,8 @@
             `RGB(
               ${startColor[0]+i*perDiffColor[0]},
               ${startColor[1]+i*perDiffColor[1]},
-              ${startColor[2]+i*perDiffColor[2]})
+              ${startColor[2]+i*perDiffColor[2]}
+            )
             `
           }
           
