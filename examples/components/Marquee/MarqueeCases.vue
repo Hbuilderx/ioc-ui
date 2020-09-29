@@ -1,15 +1,15 @@
 <template>
   <div class="marquee-wrap">
       <div class="marquee-wrap-item">
-          <ioc-marquee :time="time"></ioc-marquee>
-
+          <!-- <ioc-marquee :time="time"></ioc-marquee> -->
+          <ioc-marquee content="我把内容替换了"></ioc-marquee>
       </div>
   </div>
 </template>
 
 <script>
   export default{
-    name:"MarqueeCases,",
+    name: "MarqueeCases",
     data(){
       return{
 

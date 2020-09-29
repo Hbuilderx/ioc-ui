@@ -14,11 +14,11 @@
     props:{
       total:{
         type:Number,
-        default:()=>(0)
+        default:0
       },
       value:{
         type:Number,
-        default:()=>(0)
+        default:0
       },
       name:{
         type:String,

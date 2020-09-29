@@ -6,7 +6,7 @@
         :class="active?'box-active':''"
     >
         <div class="num">{{num}}</div>
-        <div class="name">{{name}}</div>
+        <div class="name">{{updateName}}</div>
         <div :class="isStrong?'strong':'value'">
           {{value}} <span>亿</span>
         </div>
@@ -19,34 +19,32 @@
     name: "ioc-dataItem08",
     props:{           
       name:{
-        type:String,
-        default:()=>('')
-      },     
+        type: String,
+        default:""
+      },  
       num:{
         type:Number,
-        default:()=>(3)
+        default:3
       },
       value:{
         type:Number,
-        default:()=>(230)
+        default:230
       },
     },
     data(){
       return{
         active:false,
         isStrong:false,
+        updateName: this.name
       };
     },
 
     mounted(){
-     
-      let that=this;
-      if(Number(this.value)>4){
+      if(this.value>4){
         this.isStrong=true
       };
-      
       if(this.name.length>12){
-        this.name=this.name.substr(0,12)+'...'
+        this.updateName =this.name.substr(0,12)+'...'
       }
     },
 
