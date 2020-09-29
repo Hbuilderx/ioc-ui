@@ -76,7 +76,6 @@
           let totalDomWidth=this.$el.lastElementChild.offsetWidth; 
           let ratio=(this.value/this.total);
 
-          console.log('ratio==>',ratio)
           this.cubeWidth=Math.floor((totalDomWidth/cubeCount)-1);  
 
           let cubeDomArr;
