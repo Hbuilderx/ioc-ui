@@ -42,6 +42,7 @@ export default {
     return {
       chart: null,
       fullOption: null,
+      timer:null
     };
   },
 
@@ -58,6 +59,9 @@ export default {
 
   beforeDestroy() {
     window.removeEventListener("resize", this.handleWindowResize);
+    if(this.timer){
+      clearInterval(this.timer);
+    }
   },
 
   methods: {
@@ -120,7 +124,7 @@ export default {
         let myChart = this.chart;
 
         let currentIndex = -1;
-        setInterval(function () {
+        this.timer=setInterval(function () {
           var dataLen = options.series[0].data.length;
           // 取消之前高亮的图形
           myChart.dispatchAction({
