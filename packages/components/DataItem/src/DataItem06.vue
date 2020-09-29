@@ -24,15 +24,15 @@
       },
       total:{
         type:Number,
-        default:()=>(24)
+        default:24
       },
       value:{
         type:Number,
-        default:()=>(18)
+        default:18
       },
       background:{
         type:String,
-        default:()=>('#108AF7')
+        default:'#108AF7'
       }
     },
     data(){

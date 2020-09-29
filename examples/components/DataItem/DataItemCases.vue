@@ -17,10 +17,10 @@
 
           <div class="dataitem-wrap-item-box">
               <ioc-dataItem05
-               num=3
+               :num = 3
                type="类型3"
-               total=2000
-               value=1300
+               :total=2000
+               :value=1300
               ></ioc-dataItem05>
           </div>
           
@@ -28,8 +28,8 @@
           <div class="dataitem-wrap-item-box">
               <ioc-dataItem06
                name="处办预期二级预警"
-               total=20
-               value=7
+               :total=20
+               :value=7
                background="#FFCC00"
               
               ></ioc-dataItem06>
@@ -56,15 +56,17 @@
           <div class="dataitem-wrap-item-box">
               <ioc-dataItem07
                name="第三方巡查公司"
-               total=1467
-               value=1450            
+               :total=1467
+               :value=1450 
+               :startColor=[255,1,1]
+               :endColor=[15,218,250]          
               ></ioc-dataItem07>
           </div>
           
           <div class="dataitem-wrap-item-box">
               <ioc-dataItem08
-               num=3
-               value=4.567
+               :num=3
+               :value=4.567
                name="江苏省工业园区地方税务局啊哈哈哈哈哈"
               ></ioc-dataItem08>
           </div>
@@ -82,8 +84,8 @@
           
           <div class="dataitem-wrap-item-box">
               <ioc-dataItem11
-               value=167
-               total=1834
+               :value=167
+               :total=1834
                name="无照经营游商"
                color="#843CFA"
               ></ioc-dataItem11>
@@ -100,7 +102,7 @@
   import circle from "./../../assets/image/circle.png"
   import hat from "./../../assets/image/hat.png"
   export default{
-    name:"DataItemCases,",
+    name:"DataItemCases",
     data(){
       return{
          source:[

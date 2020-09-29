@@ -25,8 +25,8 @@
     name: "ioc-dataItem05",
     props:{
       num:{
-        type:Number,
-        default:()=>(3)
+        type: Number,
+        default: 3
       },
       type:{
         type:String,
@@ -34,11 +34,11 @@
       },
       total:{
         type:Number,
-        default:()=>(1000)
+        default:1000
       },
       value:{
         type:Number,
-        default:()=>(230)
+        default:230
       }
     },
     data(){
