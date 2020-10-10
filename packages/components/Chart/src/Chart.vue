@@ -1,11 +1,3 @@
-/*
-* @Author: zhu.ds
-* @Description:基础饼图组件
-* @Date: 2020-07-27 10:19:30
-* @Last Modified by:
-* @Last Modified time:2020年7月27日
-*/
-
 <template>
   <div class="chart"></div>
 </template>
@@ -42,12 +34,13 @@ export default {
     return {
       chart: null,
       fullOption: null,
-      timer:null
+      timer: null,
     };
   },
 
   created() {},
   mounted() {
+    let that = this;
     this.chart = echart.init(this.$el);
     this.updateChartView();
     window.addEventListener("resize", this.handleWindowResize);
@@ -55,11 +48,27 @@ export default {
     if (this.autoplay && this.fullOption) {
       this.chartsAutoplay();
     }
+
+    // 监听是否鼠标移入，是则暂停自动播放
+    this.chart.on("mouseover", function(a) {
+      if (a.dataIndex != 0) {
+        if (that.timer > 0) {
+          clearInterval(that.timer);
+        }
+      }
+    });
+    this.chart.on("mouseout", function() {
+      if (that.autoplay && that.fullOption) {
+        that.chartsAutoplay();
+      }
+    });
+    
   },
+  updated() {},
 
   beforeDestroy() {
     window.removeEventListener("resize", this.handleWindowResize);
-    if(this.timer){
+    if (this.timer) {
       clearInterval(this.timer);
     }
   },
@@ -119,12 +128,13 @@ export default {
     },
 
     chartsAutoplay() {
+      let that = this;
       if (this.fullOption) {
         let options = this.fullOption;
         let myChart = this.chart;
 
         let currentIndex = -1;
-        this.timer=setInterval(function () {
+        this.timer = setInterval(function() {
           var dataLen = options.series[0].data.length;
           // 取消之前高亮的图形
           myChart.dispatchAction({
